@@ -149,7 +149,7 @@ public class FileReaderThread extends Thread
         }
         finally
         {
-            if (false) handler.handleMessage(msg);
+            handler.handleMessage(msg);
             control = null;
             handler= null;
             encoding = null;
