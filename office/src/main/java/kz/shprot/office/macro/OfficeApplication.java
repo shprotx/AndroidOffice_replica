@@ -1,5 +1,5 @@
 /*
- * 锟侥硷拷锟斤拷锟斤拷:          Application.java
+ * 锟侥硷拷锟斤拷锟斤拷:          OfficeApplication.java
  * 锟斤拷权锟斤拷锟斤拷@2001-2014 锟斤拷锟斤拷锟斤拷锟捷ｏ拷锟狡硷拷锟斤拷锟睫癸拷司
  * 锟斤拷锟斤拷锟斤拷:            android2.2
  * 时锟斤拷:              锟斤拷锟斤拷1:31:04
@@ -40,7 +40,7 @@ import java.util.Vector;
  * <p>
  * <p>
  */
-public class Application
+public class OfficeApplication
 {
     // word application
     public static final byte APPLICATION_TYPE_WP = MainConstant.APPLICATION_TYPE_WP;
@@ -79,7 +79,7 @@ public class Application
      * @param frame IMainFrame instance
      * @param parent office engine component parent 
      */
-    public Application(Activity activity, ViewGroup parent)
+    public OfficeApplication(Activity activity, ViewGroup parent)
     {
         frame = new MacroFrame(this, activity);
         mainControl =  new MainControl(frame);

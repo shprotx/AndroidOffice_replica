@@ -99,7 +99,7 @@ public class ThumbnailKit
      * 
      * @param filePath
      * @param zoom (0 < thumbnail zoom value <= MAXZOOM_THUMBNAIL )
-     * @see kz.shprot.office.macro.Application #MAXZOOM_THUMBNAIL
+     * @see OfficeApplication #MAXZOOM_THUMBNAIL
      * @return
      */
     public Bitmap getPDFThumbnail(String filePath, int zoom)
@@ -110,7 +110,7 @@ public class ThumbnailKit
             String lowerCase = filePath.toLowerCase();
             if (lowerCase.indexOf(".") > 0
                 && lowerCase.endsWith(MainConstant.FILE_TYPE_PDF)
-                && zoom > 0 && zoom <= Application.MAXZOOM_THUMBNAIL)
+                && zoom > 0 && zoom <= OfficeApplication.MAXZOOM_THUMBNAIL)
             {
                 return ReaderThumbnail.instance().getThumbnailForPDF(filePath, zoom / (float)MainConstant.STANDARD_RATE);
             }

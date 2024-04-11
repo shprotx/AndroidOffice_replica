@@ -43,7 +43,7 @@ class MacroFrame implements IMainFrame
     /**
      * 
      */
-    public MacroFrame(Application application, Activity activity)
+    public MacroFrame(OfficeApplication application, Activity activity)
     {
         this.app = application;
         this.activity = activity;
@@ -795,7 +795,7 @@ class MacroFrame implements IMainFrame
     // application name    
     private String appName;
     //
-    private Application app;
+    private OfficeApplication app;
     //
     private Activity activity;
     //

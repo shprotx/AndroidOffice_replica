@@ -204,7 +204,7 @@ public class ErrorUtil {
                             errorCode = SYSTEM_CRASH;
                         }
                         if (err.length() > 0) {
-                            // dispatch error code to Application
+                            // dispatch error code to OfficeApplication
                             control.getMainFrame().error(errorCode);
                             control.actionEvent(EventConstant.APP_ABORTREADING, true);
                             if (control.getMainFrame().isPopUpErrorDlg() && message == null) {
