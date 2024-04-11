@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "kz.shprot.androidofficereplica"
-        minSdk = 26
+        minSdk = 21
         targetSdk = 34
         versionCode = 2
         versionName = "1.0"
