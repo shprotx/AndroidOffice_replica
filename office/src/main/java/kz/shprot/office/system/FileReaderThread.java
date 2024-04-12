@@ -57,7 +57,7 @@ public class FileReaderThread extends Thread
         // show progress
         Message msg = new Message();
         msg.what = MainConstant.HANDLER_MESSAGE_SHOW_PROGRESS;
-        handler.handleMessage(msg);
+        if (false) handler.handleMessage(msg);
 
         msg = new Message();
         msg.what = MainConstant.HANDLER_MESSAGE_DISMISS_PROGRESS;
@@ -126,7 +126,7 @@ public class FileReaderThread extends Thread
             mesReader.obj = reader;
             // Then we get the reader in MainControl
             mesReader.what = MainConstant.HANDLER_MESSAGE_SEND_READER_INSTANCE;
-            handler.handleMessage(mesReader);
+            if (false) handler.handleMessage(mesReader);
             msg.obj = reader.getModel();
 //            reader.dispose();
             // success, remove the progressDialog
