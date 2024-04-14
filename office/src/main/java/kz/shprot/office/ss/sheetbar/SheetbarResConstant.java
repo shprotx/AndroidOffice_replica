@@ -42,23 +42,23 @@ public class SheetbarResConstant
     public static final short RESID_SHEETBUTTON_FOCUS_RIGHT = 12;
     
     //resource path
-    public static final String RESDIR = "com/wxiwei/office/res/icon/";
+    public static final String RESDIR = "kz/shprot/office/res/icon/";
     //sheetbar resource
-    public static final String RESNAME_SHEETBAR_BG = "com/wxiwei/office/res/icon/ss_sheetbar_bg.png";    
-    public static final String RESNAME_SHEETBAR_SHADOW_LEFT = "com/wxiwei/office/res/icon/ss_sheetbar_shadow_left.png";
-    public static final String RESNAME_SHEETBAR_SHADOW_RIGHT = "com/wxiwei/office/res/icon/ss_sheetbar_shadow_right.png";
-    public static final String RESNAME_SHEETBAR_SEPARATOR_H = "com/wxiwei/office/res/icon/ss_sheetbar_separated_horizontal.png";
+    public static final String RESNAME_SHEETBAR_BG = "kz/shprot/office/res/icon/ss_sheetbar_bg.png";
+    public static final String RESNAME_SHEETBAR_SHADOW_LEFT = "kz/shprot/office/res/icon/ss_sheetbar_shadow_left.png";
+    public static final String RESNAME_SHEETBAR_SHADOW_RIGHT = "kz/shprot/office/res/icon/ss_sheetbar_shadow_right.png";
+    public static final String RESNAME_SHEETBAR_SEPARATOR_H = "kz/shprot/office/res/icon/ss_sheetbar_separated_horizontal.png";
     
     //sheetbar button resource
-    public static final String RESNAME_SHEETBUTTON_NORMAL_LEFT = "com/wxiwei/office/res/icon/ss_sheetbar_button_normal_left.png";
-    public static final String RESNAME_SHEETBUTTON_NORMAL_MIDDLE = "com/wxiwei/office/res/icon/ss_sheetbar_button_normal_middle.png";
-    public static final String RESNAME_SHEETBUTTON_NORMAL_RIGHT = "com/wxiwei/office/res/icon/ss_sheetbar_button_normal_right.png";
+    public static final String RESNAME_SHEETBUTTON_NORMAL_LEFT = "kz/shprot/office/res/icon/ss_sheetbar_button_normal_left.png";
+    public static final String RESNAME_SHEETBUTTON_NORMAL_MIDDLE = "kz/shprot/office/res/icon/ss_sheetbar_button_normal_middle.png";
+    public static final String RESNAME_SHEETBUTTON_NORMAL_RIGHT = "kz/shprot/office/res/icon/ss_sheetbar_button_normal_right.png";
     
-    public static final String RESNAME_SHEETBUTTON_PUSH_LEFT = "com/wxiwei/office/res/icon/ss_sheetbar_button_push_left.png";
-    public static final String RESNAME_SHEETBUTTON_PUSH_MIDDLE = "com/wxiwei/office/res/icon/ss_sheetbar_button_push_middle.png";
-    public static final String RESNAME_SHEETBUTTON_PUSH_RIGHT = "com/wxiwei/office/res/icon/ss_sheetbar_button_push_right.png";
+    public static final String RESNAME_SHEETBUTTON_PUSH_LEFT = "kz/shprot/office/res/icon/ss_sheetbar_button_push_left.png";
+    public static final String RESNAME_SHEETBUTTON_PUSH_MIDDLE = "kz/shprot/office/res/icon/ss_sheetbar_button_push_middle.png";
+    public static final String RESNAME_SHEETBUTTON_PUSH_RIGHT = "kz/shprot/office/res/icon/ss_sheetbar_button_push_right.png";
     
-    public static final String RESNAME_SHEETBUTTON_FOCUS_LEFT = "com/wxiwei/office/res/icon/ss_sheetbar_button_focus_left.png";
-    public static final String RESNAME_SHEETBUTTON_FOCUS_MIDDLE = "com/wxiwei/office/res/icon/ss_sheetbar_button_focus_middle.png";
-    public static final String RESNAME_SHEETBUTTON_FOCUS_RIGHT = "com/wxiwei/office/res/icon/ss_sheetbar_button_focus_right.png";
+    public static final String RESNAME_SHEETBUTTON_FOCUS_LEFT = "kz/shprot/office/res/icon/ss_sheetbar_button_focus_left.png";
+    public static final String RESNAME_SHEETBUTTON_FOCUS_MIDDLE = "kz/shprot/office/res/icon/ss_sheetbar_button_focus_middle.png";
+    public static final String RESNAME_SHEETBUTTON_FOCUS_RIGHT = "kz/shprot/office/res/icon/ss_sheetbar_button_focus_right.png";
 }

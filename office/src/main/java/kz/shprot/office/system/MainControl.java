@@ -243,7 +243,7 @@ public class MainControl extends AbstractControl {
                     }
                     //use reflection to get that Method
                     Method isHardwareAccelerated = contentView.getClass().getMethod("isHardwareAccelerated", (Class<?>[]) null);
-                    Object o = isHardwareAccelerated.invoke(contentView, (Object) null);
+                    Object o = isHardwareAccelerated.invoke(contentView); //, (Object) null
                     if (null != o && o instanceof Boolean && (Boolean) o) {
                         //ok we're shure that HardwareAcceleration is on.
                         //Now Try to switch it off:
