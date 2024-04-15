@@ -6,6 +6,8 @@
  */
 package kz.shprot.office.fc.xls.Reader;
 
+import android.util.Log;
+
 import kz.shprot.office.constant.MainConstant;
 import kz.shprot.office.constant.SSConstant;
 import kz.shprot.office.constant.wp.WPAttrConstant;
@@ -343,6 +345,9 @@ public class CellReader
                             // 属性
                             RunAttr.instance().setRunAttribute(book, fontID, r.element("rPr"), leaf.getAttribute(), attrLayout);
                             // 开始 offset
+                            Log.d("sdfsd", "leaf and offset: " + leaf + " and " + offset);
+                            if (leaf == null)
+                                leaf = new LeafElement(text);
                             leaf.setStartOffset(offset);
                             offset += text.length();
                             // 结束 offset
