@@ -32,6 +32,7 @@ import kz.shprot.office.pg.control.PGControl;
 import kz.shprot.office.pg.control.Presentation;
 import kz.shprot.office.pg.model.PGModel;
 import kz.shprot.office.simpletext.model.IDocument;
+import kz.shprot.office.ss.control.ExcelView;
 import kz.shprot.office.ss.control.SSControl;
 import kz.shprot.office.ss.model.baseModel.Workbook;
 import kz.shprot.office.wp.control.WPControl;
@@ -228,13 +229,13 @@ public class MainControl extends AbstractControl {
 
         PictureKit.instance().setDrawPictrue(true);
 
-//        //use a handler as easiest method to post a Runnable Delayed.
-//        //we cannot check hardware-acceleration directly as it will return reasonable results after attached to Window.
-//        handler.post(new Runnable() {
-//            @Override
-//            public void run() {
-//                //now lets check for HardwareAcceleration since it is only avaliable since ICS.
-//                View contentView = null;
+        //use a handler as easiest method to post a Runnable Delayed.
+        //we cannot check hardware-acceleration directly as it will return reasonable results after attached to Window.
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                //now lets check for HardwareAcceleration since it is only avaliable since ICS.
+                View contentView = null;
 //                try {
 //                    Object obj = getView();
 //                    if (obj instanceof Presentation) {
@@ -258,22 +259,22 @@ public class MainControl extends AbstractControl {
 //                } catch (Exception e) {
 //                    Log.d("MainControl", "Error while checking hardware acceleration. " + e.getMessage());
 //                }
-//
-//                actionEvent(EventConstant.SYS_SET_PROGRESS_BAR_ID, false);
-//                // 初始化数
-//                actionEvent(EventConstant.SYS_INIT_ID, null);
-//                // 更新状态
-//                if (applicationType == MainConstant.APPLICATION_TYPE_PDF) {
-//                    if (!hassPassword) {
-//                        frame.updateToolsbarStatus();
-//                    }
-//                } else {
-//                    frame.updateToolsbarStatus();
-//                }
-//                if (contentView != null)
-//                    contentView.postInvalidate();
-//            }
-//        });
+
+                actionEvent(EventConstant.SYS_SET_PROGRESS_BAR_ID, false);
+                // 初始化数
+                actionEvent(EventConstant.SYS_INIT_ID, null);
+                // 更新状态
+                if (applicationType == MainConstant.APPLICATION_TYPE_PDF) {
+                    if (!hassPassword) {
+                        frame.updateToolsbarStatus();
+                    }
+                } else {
+                    frame.updateToolsbarStatus();
+                }
+                if (contentView != null)
+                    contentView.postInvalidate();
+            }
+        });
     }
 
     /**
