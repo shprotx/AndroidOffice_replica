@@ -13,6 +13,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -227,49 +228,52 @@ public class MainControl extends AbstractControl {
 
         PictureKit.instance().setDrawPictrue(true);
 
-        //use a handler as easiest method to post a Runnable Delayed.
-        //we cannot check hardware-acceleration directly as it will return reasonable results after attached to Window.
-        handler.post(new Runnable() {
-            @Override
-            public void run() {
-                //now lets check for HardwareAcceleration since it is only avaliable since ICS.
-                View contentView = null;
-                try {
-                    Object obj = getView();
-                    if (obj instanceof Presentation) {
-                        contentView = ((Presentation) getView()).getView().getView();
-                    } else if (obj instanceof Word) {
-                        contentView = ((Word) getView()).getPrintWord().getListView();
-                    }
-                    //use reflection to get that Method
-                    Method isHardwareAccelerated = contentView.getClass().getMethod("isHardwareAccelerated", (Class<?>[]) null);
-                    Object o = isHardwareAccelerated.invoke(contentView); //, (Object) null
-                    if (null != o && o instanceof Boolean && (Boolean) o) {
-                        //ok we're shure that HardwareAcceleration is on.
-                        //Now Try to switch it off:
-                        Method setLayerType = contentView.getClass().getMethod("setLayerType", int.class, android.graphics.Paint.class);
-                        int LAYER_TYPE_SOFTWARE = contentView.getClass().getField("LAYER_TYPE_SOFTWARE").getInt(null);
-                        setLayerType.invoke(contentView, LAYER_TYPE_SOFTWARE, null);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                actionEvent(EventConstant.SYS_SET_PROGRESS_BAR_ID, false);
-                // 初始化数
-                actionEvent(EventConstant.SYS_INIT_ID, null);
-                // 更新状态
-                if (applicationType == MainConstant.APPLICATION_TYPE_PDF) {
-                    if (!hassPassword) {
-                        frame.updateToolsbarStatus();
-                    }
-                } else {
-                    frame.updateToolsbarStatus();
-                }
-                if (contentView != null)
-                    contentView.postInvalidate();
-            }
-        });
+//        //use a handler as easiest method to post a Runnable Delayed.
+//        //we cannot check hardware-acceleration directly as it will return reasonable results after attached to Window.
+//        handler.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                //now lets check for HardwareAcceleration since it is only avaliable since ICS.
+//                View contentView = null;
+//                try {
+//                    Object obj = getView();
+//                    if (obj instanceof Presentation) {
+//                        contentView = ((Presentation) getView()).getView().getView();
+//                    } else if (obj instanceof Word) {
+//                        contentView = ((Word) getView()).getPrintWord().getListView();
+//                    }
+//                    //use reflection to get that Method
+//                    if (contentView != null) {
+//                        Method isHardwareAccelerated = contentView.getClass().getMethod("isHardwareAccelerated", (Class<?>[]) null);
+//                        Object o = isHardwareAccelerated.invoke(contentView); //, (Object) null
+//                        if (o instanceof Boolean && (Boolean) o) {
+//                            //ok we're shure that HardwareAcceleration is on.
+//                            //Now Try to switch it off:
+//                            Method setLayerType = contentView.getClass().getMethod("setLayerType", int.class, android.graphics.Paint.class);
+//                            int LAYER_TYPE_SOFTWARE = contentView.getClass().getField("LAYER_TYPE_SOFTWARE").getInt(null);
+//                            setLayerType.invoke(contentView, LAYER_TYPE_SOFTWARE, null);
+//                        }
+//                    }
+//
+//                } catch (Exception e) {
+//                    Log.d("MainControl", "Error while checking hardware acceleration. " + e.getMessage());
+//                }
+//
+//                actionEvent(EventConstant.SYS_SET_PROGRESS_BAR_ID, false);
+//                // 初始化数
+//                actionEvent(EventConstant.SYS_INIT_ID, null);
+//                // 更新状态
+//                if (applicationType == MainConstant.APPLICATION_TYPE_PDF) {
+//                    if (!hassPassword) {
+//                        frame.updateToolsbarStatus();
+//                    }
+//                } else {
+//                    frame.updateToolsbarStatus();
+//                }
+//                if (contentView != null)
+//                    contentView.postInvalidate();
+//            }
+//        });
     }
 
     /**
