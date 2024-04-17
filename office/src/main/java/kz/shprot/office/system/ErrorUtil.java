@@ -206,28 +206,28 @@ public class ErrorUtil {
                         if (err.length() > 0) {
                             // dispatch error code to OfficeApplication
                             Log.d("sdfsd", "Some error happened. " + err);
-//                            control.getMainFrame().error(errorCode);
-//                            control.actionEvent(EventConstant.APP_ABORTREADING, true);
-//                            if (control.getMainFrame().isPopUpErrorDlg() && message == null) {
-//                                AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-//                                builder.setMessage(err);
-//                                builder.setCancelable(false);
-//                                builder.setTitle(control.getMainFrame().getAppName());
-//                                String ok = control.getMainFrame().getLocalString("BUTTON_OK");
-//                                builder.setPositiveButton(ok, new DialogInterface.OnClickListener() {
-//                                    public void onClick(DialogInterface dialog, int id) {
-//                                        message = null;
-//                                        activity.onBackPressed();
-//                                    }
-//                                });
-//                                message = builder.create();
-//                                message.show();
-//                            } else {
-//                                ICustomDialog dlgListener = control.getCustomDialog();
-//                                if (dlgListener != null) {
-//                                    dlgListener.showDialog(ICustomDialog.DIALOGTYPE_ERROR);
-//                                }
-//                            }
+                            control.getMainFrame().error(errorCode);
+                            control.actionEvent(EventConstant.APP_ABORTREADING, true);
+                            if (control.getMainFrame().isPopUpErrorDlg() && message == null) {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+                                builder.setMessage(err);
+                                builder.setCancelable(false);
+                                builder.setTitle(control.getMainFrame().getAppName());
+                                String ok = control.getMainFrame().getLocalString("BUTTON_OK");
+                                builder.setPositiveButton(ok, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        message = null;
+                                        activity.onBackPressed();
+                                    }
+                                });
+                                message = builder.create();
+                                message.show();
+                            } else {
+                                ICustomDialog dlgListener = control.getCustomDialog();
+                                if (dlgListener != null) {
+                                    dlgListener.showDialog(ICustomDialog.DIALOGTYPE_ERROR);
+                                }
+                            }
                         }
                     } catch (Exception eee) {
                         Log.d("sdfsd", "Error in ErrorUtil class, line 233. " + eee.getMessage());
